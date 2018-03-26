@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Automation PM1</string>
+    <string name="bt1">Monitoring KwH</string>
+    <string name="bt2">Monitoring Steam</string>
+    <string name="bt3">Monitoring Oli</string>
+    <string name="bt4">Monitoring Motor</string>
+    <string name="cp">Developed By Thomi Hidayat</string>
+</resources>
