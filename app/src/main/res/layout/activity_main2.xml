@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.mitohida.automationpm1.Main2Activity">
 
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/web_kwh"
+         />
 </android.support.constraint.ConstraintLayout>
