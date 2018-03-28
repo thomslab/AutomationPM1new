@@ -7,12 +7,14 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 public class form_kwh_meter extends AppCompatActivity {
 
     private WebView webkwh;
     private String form_kwh = "https://docs.google.com/forms/d/e/1FAIpQLSdnQ669n0q27fnTwsBOYU-Q8wlKw15TL5AFy8FJmmq0pGyv4Q/viewform?usp=sf_link";
     private ProgressBar progressBar1;
+    private TextView text_loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,9 @@ public class form_kwh_meter extends AppCompatActivity {
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
             super.onPageStarted(view, url, favicon);
             progressBar1 = (ProgressBar)findViewById(R.id.progress2);
+            text_loading = (TextView)findViewById(R.id.text1);
             progressBar1.setVisibility(View.VISIBLE);
+            text_loading.setVisibility(View.VISIBLE);
             webkwh.setVisibility(View.INVISIBLE);
         }
 
@@ -48,6 +52,7 @@ public class form_kwh_meter extends AppCompatActivity {
             super.onPageFinished(view, url);
 
             progressBar1.setVisibility(View.GONE);
+            text_loading.setVisibility(View.GONE);
             webkwh.setVisibility(View.VISIBLE);
 
         }
